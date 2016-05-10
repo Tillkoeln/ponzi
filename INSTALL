@@ -1,0 +1,9 @@
+Building COIN
+
+See doc/readme-qt.rst for instructions on building COIN QT,
+the intended-for-end-users, nice-graphical-interface, reference
+implementation of COIN.
+
+See doc/build-*.txt for instructions on building COINd,
+the intended-for-services, no-graphical-interface, reference
+implementation of COIN.
