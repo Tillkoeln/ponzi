@@ -1031,77 +1031,11 @@ int64_t GetProofOfWorkReward(int64_t nFees)
         return nSubsidy + nFees;
       }            
 	  
-    else if (pindexBest->nHeight <= 228000)
+    else if (pindexBest->nHeight <= 999999)
       {
         int64_t nSubsidy = 5 * COIN;
         return nSubsidy + nFees;
       }          
-
-    else if (pindexBest->nHeight <= 230000)
-      {
-        int64_t nSubsidy = 100 * COIN;
-        return nSubsidy + nFees;
-      }      	  
-	  
-    else if (pindexBest->nHeight <= 232000)
-      {
-        int64_t nSubsidy = 90 * COIN;
-        return nSubsidy + nFees;
-      }      
-
-    else if (pindexBest->nHeight <= 234000)
-      {
-        int64_t nSubsidy = 80 * COIN;
-        return nSubsidy + nFees;
-      }      	  
-	  
-    else if (pindexBest->nHeight <= 236000)
-      {
-        int64_t nSubsidy = 70 * COIN;
-        return nSubsidy + nFees;
-      }      	  
-	  
-    else if (pindexBest->nHeight <= 238000)
-      {
-        int64_t nSubsidy = 60 * COIN;
-        return nSubsidy + nFees;
-      }      	  
-
-    else if (pindexBest->nHeight <= 240000)
-      {
-        int64_t nSubsidy = 50 * COIN;
-        return nSubsidy + nFees;
-      }      
-
-    else if (pindexBest->nHeight <= 242000)
-      {
-        int64_t nSubsidy = 40 * COIN;
-        return nSubsidy + nFees;
-      }     
-
-    else if (pindexBest->nHeight <= 244000)
-      {
-        int64_t nSubsidy = 30 * COIN;
-        return nSubsidy + nFees;
-      }       	  
-	  
-    else if (pindexBest->nHeight <= 246000)
-      {
-        int64_t nSubsidy = 20 * COIN;
-        return nSubsidy + nFees;
-      }      	  
-	  
-    else if (pindexBest->nHeight <= 248000)
-      {
-        int64_t nSubsidy = 10 * COIN;
-        return nSubsidy + nFees;
-      }      	
-
-    else if (pindexBest->nHeight <= 1000000)
-      {
-        int64_t nSubsidy = 5 * COIN;
-        return nSubsidy + nFees;
-      }      	  
       
     if (fDebug && GetBoolArg("-printcreation"))
     printf("GetProofOfWorkReward() : create=%s nSubsidy=%"PRId64"\n", FormatMoney(nSubsidy).c_str(), nSubsidy);
@@ -1126,7 +1060,7 @@ int64_t GetProofOfStakeReward(int64_t nCoinAge, int64_t nFees)
         nSubsidy = 1000 * COIN; 
 		return nSubsidy + nFees; 
     }	
-
+	
 	else if(pindexBest->nHeight > 499999)
 	{
 	    nSubsidy = nCoinAge * COIN_YEAR_REWARD * 33 / (365 * 33 + 8);
