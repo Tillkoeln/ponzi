@@ -4,15 +4,18 @@
 
 USE_UPNP:=0
 
+BOOST_SUFFIX?=-mgw49-mt-s-1_55
 INCLUDEPATHS= \
+ -I"$(CURDIR)" \
  -I"C:\deps\boost_1_55_0" \
  -I"C:\deps\db-4.8.30.NC\build_unix" \
- -I"C:\deps\openssl-1.0.1g\include"
+ -I"C:\deps\openssl-1.0.1e\include"
 
 LIBPATHS= \
+ -L"$(CURDIR)/leveldb" \
  -L"C:\deps\boost_1_55_0\stage\lib" \
  -L"C:\deps\db-4.8.30.NC\build_unix" \
- -L"C:\deps\openssl-1.0.1g"
+ -L"C:\deps\openssl-1.0.1e"
 
 LIBS= \
  -l leveldb \
